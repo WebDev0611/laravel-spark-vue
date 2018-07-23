@@ -1,0 +1,65 @@
+// core overrides
+
+$border-color:                        #fafafa;
+
+// Navbar
+
+$navbar-height:                       50px;
+// $navbar-bg:                           theme-color("primary");
+$navbar-border:                       0;
+$navbar-brand-width:                  220px;
+// $navbar-brand-bg:                     darken(theme-color("primary"),10%);
+$navbar-brand-logo-size:              90px auto;
+$navbar-brand-border:                 0;
+
+$navbar-color:                        #ffffff;
+// $navbar-hover-color:                  darken($navbar-color, 10%);
+// $navbar-active-color:                 darken($navbar-color, 20%);
+// $navbar-disabled-color:               lighter($navbar-color, 20%);
+
+// Sidebar
+$sidebar-width:                       200px !default;
+$sidebar-padding:                     0 !default;
+$sidebar-minimized-width:             50px !default;
+$sidebar-minimized-height:            $sidebar-minimized-width !default;
+$sidebar-compact-width:               150px !default;
+$sidebar-compact-height:              $sidebar-compact-width !default;
+$sidebar-color:                       #fff !default;
+$sidebar-bg:                          #fafafa;
+$sidebar-borders:                     none !default;
+$mobile-sidebar-width:                220px !default;
+
+// Sidebar Navigation
+
+$sidebar-nav-title-padding-y:         .95rem;
+$sidebar-nav-title-color:             #999;
+
+// $sidebar-nav-link-hover-bg:           darken($sidebar-bg, 10%);
+// $sidebar-nav-link-active-bg:          darken($sidebar-bg, 10%);
+// $sidebar-nav-dropdown-bg:             darken($sidebar-bg, 5%);
+
+// Breadcrumb
+
+$breadcrumb-borders:                  0;
+
+// Aside Menu
+$aside-menu-width:                    300px;
+
+// Footer
+$footer-height:                       50px;
+$footer-bg:                           #fafafa;
+$footer-color:                        #fff;
+
+
+// Z-index master list
+//
+// Warning: Avoid customizing these values. They're used for a bird's eye view
+// of components dependent on the z-axis and are designed to all work together.
+
+$zindex-dropdown:                   1000 !default;
+$zindex-sticky:                     1020 !default;
+$zindex-fixed:                      1030 !default;
+$zindex-modal-backdrop:             1040 !default;
+$zindex-modal:                      1050 !default;
+$zindex-popover:                    1060 !default;
+$zindex-tooltip:                    1070 !default;
