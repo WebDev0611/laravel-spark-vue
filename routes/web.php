@@ -24,6 +24,6 @@ Route::get('/new-quote', 'QuoteController@show');
 Route::get('/quotes', 'QuoteController@list')->where('quotes', '.*');
 // Route::get('/quotes', 'QuoteController@store');
 
-// Route::get('/quotes/save', 'QuoteController@save');
+Route::post('/quotes/store', 'QuoteController@store');
 
 Route::get('/quotes/{id}', 'QuoteController@item');

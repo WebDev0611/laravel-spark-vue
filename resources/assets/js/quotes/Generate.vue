@@ -372,7 +372,7 @@
               <button type="button" name="button" @click="checkForm(); requestQuote()" class="btn btn-success btn-lg">Submit
                 <span v-if="submitBtnLoading"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i></span>
               </button>
-              <a class="btn btn-danger btn-lg" href="#" @click="saveQuote()">Get Data</a>
+              <a class="btn btn-danger btn-lg" href="#" @click="pullQuote()">Get Data</a>
             </b-col>
           </b-row>
         </b-col>
@@ -815,6 +815,20 @@ export default {
       })
     },
     saveQuote () {
+      let data = {};
+      data.quotes = JSON.stringify(this.quotes);
+      
+      axios.post('/quotes/store', data, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(response => {
+        console.log(response);
+      }).catch(err => {
+        console.log(err.message);
+      })
+    },
+    pullQuote () {
       axios.get('https://py.rumbolt.ca/quote/api', {
         headers: {
           'Content-Type': 'application/json'
@@ -868,10 +882,10 @@ export default {
         this.submitBtnLoading = false
         this.getQuotes()
       })
-        .catch(errors => {
-          this.submitBtnLoading = false
-          console.log(errors.message)
-        })
+      .catch(errors => {
+        this.submitBtnLoading = false
+        console.log(errors.message)
+      })
     }
   },
   watch: {

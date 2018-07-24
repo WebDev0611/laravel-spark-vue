@@ -2854,6 +2854,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       });
     },
     saveQuote: function saveQuote() {
+      var data = {};
+      data.quotes = JSON.stringify(this.quotes);
+
+      axios.post('/quotes/store', data, {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }).then(function (response) {
+        console.log(response);
+      }).catch(function (err) {
+        console.log(err.message);
+      });
+    },
+    pullQuote: function pullQuote() {
       var _this2 = this;
 
       axios.get('https://py.rumbolt.ca/quote/api', {
@@ -77790,7 +77804,7 @@ var render = function() {
                             attrs: { href: "#" },
                             on: {
                               click: function($event) {
-                                _vm.saveQuote()
+                                _vm.pullQuote()
                               }
                             }
                           },

@@ -67,9 +67,16 @@ class QuoteController extends Controller
      * @return Response
      */
     public function store(Request $request)  {
- 
-        // $quote->id = $request->input('quote_id');
-        $quote->json =  $request->quotes; 
+        $quote = array(
+            'json' => $request->quotes
+        );
+
+        if ($quote) {
+            Quote::forceCreate($quote);
+            return response(null, Response::HTTP_OK);
+        }
+
+        return response("Failed", Response::HTTP_NOT_FOUND);
     }
 
     public function destroy($id)
