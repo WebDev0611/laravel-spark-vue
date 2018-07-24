@@ -462,6 +462,10 @@ app-root {
 #quoteResults .title {
   color:#007bff;
 }
+#quoteResults .card-header {
+  border-bottom:none;
+  border-radius:8px;
+}
 #quoteResults .list-group-item {
   padding: 0.5rem 1rem;
 }
@@ -482,6 +486,14 @@ app-root {
   padding-left: 8px;
   margin-top: -5px;
   font-size: 0.9rem;
+}
+.row.quote-item {
+  background: #fafafa;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 //
 // Footer

@@ -1,4 +1,4 @@
-Vue.component('quotes', {
+Vue.component('new-quote', {
     props: ['user'],
 
     mounted() {

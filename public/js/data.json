@@ -1,0 +1,100 @@
+{
+   "quotes": [
+       {
+           "beam": {
+               "beamSpliceHardware": "false",
+               "beamToBeamDistance": "0",
+               "cantilever": "true",
+               "cantileverLength": "1.5",
+               "lengths": "1.1",
+               "maxSpan": "17",
+               "multiBeam": "false",
+               "numBeamSplice": "0",
+               "numberOfBeams": "1",
+               "part": "P201",
+               "price": "152.00",
+               "totalLength": "20",
+               "tributaryWidth": "4.6",
+               "type": "7.1",
+               "wallToBeamDistance": "7"
+           },
+           "description": "You have entered testing mode...",
+           "fascia": {
+               "numberOfPieces": "0",
+               "part": "X",
+               "price": "0.00"
+           },
+           "gutter": {
+               "numberOfPieces": "2@30",
+               "part": "P240",
+               "price": "168.00"
+           },
+           "hardware": {
+               "beamToFasciaHardware": "true",
+               "panelToBeamScrews": "false",
+               "price": "90.60",
+               "screwsSealantScuppersPaintEtc": "true",
+               "tarTape": "false"
+           },
+           "header": {
+               "numberOfPieces": "0",
+               "part": "",
+               "price": "0.00"
+           },
+           "id": "0",
+           "panel": {
+               "maxSpan": "7",
+               "numberOfPanels": "10",
+               "overhang": "1",
+               "pansToSpan": "7",
+               "part": "P142",
+               "price": "480.00",
+               "secondary_overhang": "0",
+               "type": "3x8 24Ga. Galvalume Pan"
+           },
+           "param": {
+               "color": {
+                   "beam": "0",
+                   "fascia": "0",
+                   "panel": "0",
+                   "post": "0"
+               },
+               "dimensions": {
+                   "overhang": "12",
+                   "projection": "96",
+                   "wallHeight": "96",
+                   "width": "240"
+               },
+               "load": {
+                   "mph": "15",
+                   "psf": "10"
+               },
+               "options": {
+                   "fanBeam": "0",
+                   "mode": "test",
+                   "numPosts": "2",
+                   "panelType": "1",
+                   "postAttached": "true",
+                   "wallAttached": "true",
+                   "zipcode": "90210"
+               }
+           },
+           "post": {
+               "bottomBracket": "true",
+               "bottomBracketPrice": "17.00",
+               "length": "8",
+               "numberOfPosts": "2",
+               "part": "P329",
+               "postsPerBeam": "2",
+               "price": "110.08",
+               "topBracket": "true",
+               "topBracketPrice": "5.50",
+               "type": "3x3x0.125 Tube"
+           },
+           "price": "1023.00",
+           "status": "Quote Generation Status:",
+           "title": "Test Mode",
+           "version": "0.1a"
+       }
+   ]
+}

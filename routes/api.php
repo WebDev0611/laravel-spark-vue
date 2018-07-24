@@ -14,5 +14,10 @@
 Route::group([
     'middleware' => 'auth:api'
 ], function () {
-    //
+	// Route::get('/quotes', 'QuoteController@index');
+	Route::get('/quotes', 'QuoteController@index')->where('quotes', '.*');
+	Route::get('/quotes/store', 'QuoteController@store');
+	// Route::get('/quotes/save', 'QuoteController@save');
+	Route::get('/quotes/{id}', 'QuoteController@item');
 });
+

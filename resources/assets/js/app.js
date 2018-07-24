@@ -15,11 +15,11 @@
  */
 
 require('spark-bootstrap');
-
 require('./components/bootstrap');
+Vue.use(require('vue-moment'));
 
-import QuoteDetails from './quotes/Details.vue';
-Vue.component('quote', QuoteDetails);
+import quoteDetails from './quotes/Details.vue';
+Vue.component('quote', quoteDetails);
 
 import Sidebar from './components/Sidebar.vue';
 Vue.component('Sidebar', Sidebar);
@@ -29,7 +29,15 @@ Vue.use(BootstrapVue);
 
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import router from './routes.js'
 
+// original compontent constructor
 var app = new Vue({
-    mixins: [require('spark')]
+    mixins: [require('spark')],
+    router,
 });
+
+// component constructor for vue-router
+// var app = Vue.extend({
+//  mixins: [require('./spark-with-vue-router')]
+// });

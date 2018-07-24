@@ -15,4 +15,15 @@ Route::get('/', 'WelcomeController@show');
 
 Route::get('/home', 'HomeController@show');
 
-Route::get('/quotes', 'QuoteController@show');
+Route::get('/clients', 'ClientController@index')->where('clients', '.*');
+
+
+Route::get('/new-quote', 'QuoteController@show');
+
+// Route::get('/quotes', 'QuoteController@list');
+Route::get('/quotes', 'QuoteController@list')->where('quotes', '.*');
+// Route::get('/quotes', 'QuoteController@store');
+
+// Route::get('/quotes/save', 'QuoteController@save');
+
+Route::get('/quotes/{id}', 'QuoteController@item');

@@ -23,16 +23,27 @@
 	            </h3>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="/quotes">
+                    <a class="nav-link" href="/quotes#/list">
                         <i class="fal fa-file-alt"></i>
-                        List
+                        Saved Quotes
                     </a>
                 </li>
 
                 <li class="nav-item ">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="/new-quote">
                         <i class="fal fa-plus-circle"></i>
                         New Quote
+                    </a>
+                </li>
+
+                <h3 class="nav-heading ">
+                    Clients
+                </h3>
+
+                <li class="nav-item ">
+                    <a class="nav-link" href="/clients#/list">
+                        <i class="fal fa-file-alt"></i>
+                        Client List
                     </a>
                 </li>
 
