@@ -24,41 +24,11 @@
     methods: {
       /* global axios */
       getData () {
-        // // axios.defaults.baseURL = 'https://crm.patioconcepts.ca/api/v1/clients';
-        // // axios.defaults.headers.common['X-Ninja-Token'] = "av9ikrhggsu61zuxesaz0vhhd3rm9c4l";
-        // // axios.get('https://crm.patioconcepts.ca/api/v1/clients')
-        // // })
-        // axios.get('https://crm.patioconcepts.ca/api/v1/clients', {
-        // params:{
-        //   'X-Ninja-Token': 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l',
-        // },
-        // headers: {
-        //   'X-Ninja-Token': 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l',
-        //   // 'Content-Type': 'text/plain',
-        //   // 'Access-Control-Request-Method': 'GET'
-        //   // 'Access-Control-Allow-Origin':'https://crm.patioconcepts.ca',
-        //   // 'X-Requested-With': 'XMLHttpRequest',
-        //   // 'Authorization': 'X-Ninja-Token ' + 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l', 
-        //   // 'withCredentials': 'false',
-        //   // 'crossDomain': 'true',
-        //   // 'Access-Control-Allow-Origin': '*',
-        //   // 'Content-Type': 'application/json',
-        //   // 'Access-Control-Allow-Headers': 'X-Requested-With',
-        //   // 'X-Ninja-Token': 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l'
-        // },
-        // }).then(response => {
-        //   console.log(response.data);
-        //   this.clients = response.data
-        //   this.postData()
-        // }).catch(errors => {
-        //   console.log(errors.message)
-        // })
         axios.get('/ninja', {
           headers: {
             'Content-Type': 'application/json'
           }
         }).then(response => {
-          console.log('********************');
           this.accountData = response.data.data;
           console.log(this.accountData);
         }).catch(error => {
