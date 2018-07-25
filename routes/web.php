@@ -17,7 +17,6 @@ Route::get('/home', 'HomeController@show');
 
 Route::get('/clients', 'ClientController@index')->where('clients', '.*');
 
-
 Route::get('/new-quote', 'QuoteController@show');
 
 // Route::get('/quotes', 'QuoteController@list');
@@ -27,3 +26,5 @@ Route::get('/quotes', 'QuoteController@list')->where('quotes', '.*');
 Route::post('/quotes/store', 'QuoteController@store');
 
 Route::get('/quotes/{id}', 'QuoteController@item');
+
+Route::get('/ninja', 'IninjaController@getData');

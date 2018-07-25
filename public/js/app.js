@@ -1964,7 +1964,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      quotes: []
+      accountData: []
     };
   },
 
@@ -1973,34 +1973,46 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     getData: function getData() {
       var _this = this;
 
-      // axios.defaults.baseURL = 'https://crm.patioconcepts.ca/api/v1/clients';
-      // axios.defaults.headers.common['X-Ninja-Token'] = "av9ikrhggsu61zuxesaz0vhhd3rm9c4l";
-      // axios.get('https://crm.patioconcepts.ca/api/v1/clients')
+      // // axios.defaults.baseURL = 'https://crm.patioconcepts.ca/api/v1/clients';
+      // // axios.defaults.headers.common['X-Ninja-Token'] = "av9ikrhggsu61zuxesaz0vhhd3rm9c4l";
+      // // axios.get('https://crm.patioconcepts.ca/api/v1/clients')
+      // // })
+      // axios.get('https://crm.patioconcepts.ca/api/v1/clients', {
+      // params:{
+      //   'X-Ninja-Token': 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l',
+      // },
+      // headers: {
+      //   'X-Ninja-Token': 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l',
+      //   // 'Content-Type': 'text/plain',
+      //   // 'Access-Control-Request-Method': 'GET'
+      //   // 'Access-Control-Allow-Origin':'https://crm.patioconcepts.ca',
+      //   // 'X-Requested-With': 'XMLHttpRequest',
+      //   // 'Authorization': 'X-Ninja-Token ' + 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l', 
+      //   // 'withCredentials': 'false',
+      //   // 'crossDomain': 'true',
+      //   // 'Access-Control-Allow-Origin': '*',
+      //   // 'Content-Type': 'application/json',
+      //   // 'Access-Control-Allow-Headers': 'X-Requested-With',
+      //   // 'X-Ninja-Token': 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l'
+      // },
+      // }).then(response => {
+      //   console.log(response.data);
+      //   this.clients = response.data
+      //   this.postData()
+      // }).catch(errors => {
+      //   console.log(errors.message)
       // })
-      axios.get('https://crm.patioconcepts.ca/api/v1/clients', {
-        params: {
-          'X-Ninja-Token': 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l'
-        },
+      axios.get('/ninja', {
         headers: {
-          'X-Ninja-Token': 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l'
-          // 'Content-Type': 'text/plain',
-          // 'Access-Control-Request-Method': 'GET'
-          // 'Access-Control-Allow-Origin':'https://crm.patioconcepts.ca',
-          // 'X-Requested-With': 'XMLHttpRequest',
-          // 'Authorization': 'X-Ninja-Token ' + 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l', 
-          // 'withCredentials': 'false',
-          // 'crossDomain': 'true',
-          // 'Access-Control-Allow-Origin': '*',
-          // 'Content-Type': 'application/json',
-          // 'Access-Control-Allow-Headers': 'X-Requested-With',
-          // 'X-Ninja-Token': 'av9ikrhggsu61zuxesaz0vhhd3rm9c4l'
+          'Content-Type': 'application/json'
         }
       }).then(function (response) {
-        console.log(response.data);
-        _this.clients = response.data;
-        _this.postData();
-      }).catch(function (errors) {
-        console.log(errors.message);
+        console.log('********************');
+        _this.accountData = response.data.data;
+        console.log(_this.accountData);
+      }).catch(function (error) {
+        console.log('////////////////////');
+        console.log(error);
       });
     }
   },

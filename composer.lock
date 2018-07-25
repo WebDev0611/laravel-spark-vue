@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5e0715a7ba2478ce3a047ced6e1fee8",
+    "content-hash": "24e9059d3875b9625df90fc1d1086ce1",
     "packages": [
         {
             "name": "coconutcraig/laravel-postmark",
